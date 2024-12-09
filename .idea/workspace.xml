@@ -1,7 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86952e7d-c9bd-4825-9c64-ce31dc0aab66" name="Changes" comment="add basic code from kata 3.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/architecture/control/ImportCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/architecture/io/DatabaseFilmIndustryPersonReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/architecture/io/DatabaseFilmIndustryPersonWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/architecture/io/DatabaseToFilmIndustryPersonAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/architecture/io/FilmIndustryPersonWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/apps/windows/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/apps/windows/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{}</component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Ian/IdeaProjects/kata4/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="software.ulpgc.kata4.architecture.io" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ian\IdeaProjects\kata4\src\main\resources" />
+      <recent name="C:\Users\Ian\IdeaProjects\kata4\src\main\java" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86952e7d-c9bd-4825-9c64-ce31dc0aab66" name="Changes" comment="" />
+      <created>1733703273840</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733703273840</updated>
+      <workItem from="1733703274718" duration="3229000" />
+    </task>
+    <task id="LOCAL-00001" summary="add basic code from kata 3.">
+      <option name="closed" value="true" />
+      <created>1733703432225</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733703432225</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add basic code from kata 3." />
+    <option name="LAST_COMMIT_MESSAGE" value="add basic code from kata 3." />
+  </component>
 </project>

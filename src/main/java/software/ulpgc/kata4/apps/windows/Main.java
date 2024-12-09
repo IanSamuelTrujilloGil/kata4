@@ -1,20 +1,37 @@
 package software.ulpgc.kata4.apps.windows;
 
+import software.ulpgc.kata4.architecture.control.ImportCommand;
 import software.ulpgc.kata4.architecture.control.ToggleGraphCommand;
-import software.ulpgc.kata4.architecture.io.ToggleBarchartLoader;
+import software.ulpgc.kata4.architecture.io.*;
 import software.ulpgc.kata4.architecture.model.Barchart;
 import software.ulpgc.kata4.architecture.model.FilmIndustryPerson;
 import software.ulpgc.kata4.architecture.model.MapToBarchartBuilder;
 
+import java.io.File;
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
+        try (FileFilmIndustryPersonReader reader = new FileFilmIndustryPersonReader(new File("src/main/resources/name.basics.tsv"), new TsvFilmIndustryPersonDeserializer());
+             DatabaseFilmIndustryPersonWriter writer = DatabaseFilmIndustryPersonWriter.open(databaseFile())
+        ) {
+            new ImportCommand(reader,writer).execute();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         List<FilmIndustryPerson> people;
 
+        try (DatabaseFilmIndustryPersonReader reader = DatabaseFilmIndustryPersonReader.open(databaseFile())) {
+            people = reader.readAll();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         HashMap<String, Integer> barchartLifeStatus = new HashMap<>();
         HashMap<String, Integer> barchartDeadYear = new HashMap<>();
@@ -41,6 +58,10 @@ public class Main {
         mainFrame.getDisplay().show(loader.load(0));
         mainFrame.setVisible(true);
 
+    }
+
+    private static File databaseFile() {
+        return new File("FilmIndustryPeople.db");
     }
 
     private static boolean isAgeOutOfRange(FilmIndustryPerson filmIndustryPerson) {
