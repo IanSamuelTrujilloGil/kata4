@@ -2,28 +2,89 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<modelVersion>4.0.0</modelVersion>
 
-    <groupId>software.ulpgc.kata4</groupId>
-    <artifactId>kata4</artifactId>
-    <version>1.0-SNAPSHOT</version>
+<properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.groupId>software.ulpgc</project.groupId>
+    <project.artifactId>kata4</project.artifactId>
+    <project.version>1.0-SNAPSHOT</project.version>
+    <windowsMainClass>${project.groupId}.${project.artifactId}.apps.windows.Main</windowsMainClass>
+</properties>
 
-    <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.jfree</groupId>
-            <artifactId>jfreechart</artifactId>
-            <version>1.5.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.xerial</groupId>
-            <artifactId>sqlite-jdbc</artifactId>
-            <version>3.47.0.0</version>
-        </dependency>
-    </dependencies>
+<groupId>${project.groupId}</groupId>
+<artifactId>${project.artifactId}</artifactId>
+<version>${project.version}</version>
+
+<dependencies>
+    <dependency>
+        <groupId>org.jfree</groupId>
+        <artifactId>jfreechart</artifactId>
+        <version>1.5.5</version>
+    </dependency>
+    <dependency>
+        <groupId>org.xerial</groupId>
+        <artifactId>sqlite-jdbc</artifactId>
+        <version>3.47.0.0</version>
+    </dependency>
+</dependencies>
+
+
+<build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.2.4</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                    <configuration>
+                        <transformers>
+                            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <mainClass>${windowsMainClass}</mainClass>
+                            </transformer>
+                        </transformers>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.0.0</version>
+            <executions>
+                <execution>
+                    <phase>install</phase>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <executable>jpackage</executable>
+                <arguments>
+                    <argument>--input</argument>
+                    <argument>target/</argument>
+                    <argument>--name</argument>
+                    <argument>${project.artifactId}</argument>
+                    <argument>--main-jar</argument>
+                    <argument>${project.artifactId}.jar</argument>
+                    <argument>--main-class</argument>
+                    <argument>${windowsMainClass}</argument>
+                    <argument>--type </argument>
+                    <argument>exe</argument>
+                    <argument>--win-dir-chooser</argument>
+                </arguments>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 
 </project>

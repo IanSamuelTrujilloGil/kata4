@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86952e7d-c9bd-4825-9c64-ce31dc0aab66" name="Changes" comment="add basic code from kata 3.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/architecture/control/ImportCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/architecture/io/DatabaseFilmIndustryPersonReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/architecture/io/DatabaseFilmIndustryPersonWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/architecture/io/DatabaseToFilmIndustryPersonAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/architecture/io/FilmIndustryPersonWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/apps/windows/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/kata4/apps/windows/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +21,25 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "IanSamuelTrujilloGil"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/IanSamuelTrujilloGil/kata4.git",
+    "accountId": "af666e48-7602-4824-bf98-0c09adb84a7e"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2rLPOcFveA8c9wyKIbPeMCUA1if" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -33,10 +47,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Maven.kata4 [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ian/IdeaProjects/kata4/src/main/resources",
+    "last_opened_file_path": "C:/Users/Ian/Desktop/k4/kata4/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,6 +65,7 @@
       <recent name="software.ulpgc.kata4.architecture.io" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ian\Desktop\k4\kata4\src\main\resources" />
       <recent name="C:\Users\Ian\IdeaProjects\kata4\src\main\resources" />
       <recent name="C:\Users\Ian\IdeaProjects\kata4\src\main\java" />
     </key>
@@ -71,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733703273840</updated>
       <workItem from="1733703274718" duration="3229000" />
+      <workItem from="1736335351646" duration="892000" />
     </task>
     <task id="LOCAL-00001" summary="add basic code from kata 3.">
       <option name="closed" value="true" />
